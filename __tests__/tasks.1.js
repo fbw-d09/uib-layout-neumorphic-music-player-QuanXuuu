@@ -45,8 +45,8 @@ describe('Gradient and shadow', () => {
 
 describe('Fonts and Icons', () => {
     it("Font awesome CDN should be loaded", async () => {
-        const fontAwesomeCDN = await page.$eval('link[href*="fontawesome"]', (el) => el.href);
-        expect(fontAwesomeCDN).toMatch(/fontawesome/);
+        const fontAwesomeCDN = await page.$eval('link[href*="font-awesome"]', (el) => el.href);
+        expect(fontAwesomeCDN).toMatch(/font-awesome/);
     });
     it("Font awesome icons should be present on page", async () => {
         const fontAwesomeIcons = await page.$$eval('i[class*="fa"]', (els) => els.length);
